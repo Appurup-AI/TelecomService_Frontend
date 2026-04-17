@@ -1,5 +1,9 @@
 # TelecomService_Frontend_Moskalev
 
+## Проект выложен на GitHub Pages по ссылке
+
+https://appurup-ai.github.io/TelecomService_Frontend
+
 ## Настройка проекта
 
 ```sh
