@@ -18,8 +18,7 @@ export const useDevicesStore = defineStore('devices', () => {
       headers: { 'Content-Type': 'application/json' },
       body: device,
     })
-
-    if (!error.value) {
+    if (data.value) {
       devices.value.push(data.value)
     }
   }
@@ -50,7 +49,7 @@ export const useDevicesStore = defineStore('devices', () => {
       method: 'GET',
     })
 
-    if (!error.value && data.value) {
+    if (data.value) {
       devices.value = data.value
       return data.value
     }
@@ -63,22 +62,23 @@ export const useDevicesStore = defineStore('devices', () => {
       headers: { 'Content-Type': 'application/json' },
     })
 
-    if (!error.value && data.value) {
+    if (data.value) {
       return data.value
     }
   }
 
   const removeDevice = async (id: number) => {
-    console.log('Splice')
     await fetchData({
       url: `${import.meta.env.VITE_API_URL}/devices/${id}`,
       method: 'DELETE',
     })
 
     const index = devices.value.findIndex((device: Device) => Number(device.id) === Number(id))
+    console.log(index)
     if (index !== -1) {
       devices.value.splice(index, 1)
     }
+    console.log('Spliced')
   }
 
   return {

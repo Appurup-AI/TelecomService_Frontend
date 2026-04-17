@@ -17,7 +17,6 @@ onMounted(async () => {
 <template>
   <div class="container">
     <div v-if="devicesStore.loading" class="loading">Loading...</div>
-    <div v-if="devicesStore.error" class="error">{{ error }}</div>
     <div v-if="device" class="info">
       <div class="info__heading">
         <span class="info__heading--primary">Id:</span>
