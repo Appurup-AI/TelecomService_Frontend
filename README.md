@@ -2,7 +2,7 @@
 
 ## Проект выложен на GitHub Pages по ссылке
 
-https://appurup-ai.github.io/TelecomService_Frontend/devices
+https://appurup-ai.github.io/TelecomService_Frontend/
 
 ## Настройка проекта
 
